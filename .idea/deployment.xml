@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="proyecto_final_bd">
+    <serverData>
+      <paths name="practica_bd">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="proyecto_final_bd">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="proyecto_final_bd" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
