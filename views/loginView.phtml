@@ -1,25 +1,35 @@
+<?php
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
         <!-- Titulo -->
-        <title>Titulo</title>
+        <title>Iniciar sesión | Sistema de notas</title>
         <!-- Charset -->
         <meta charset="UTF-8">
         <!-- Viewport -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <!-- Boostrap -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/ >
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="./styles/css/alertify.bootstrap.css"/>
+        <link rel="stylesheet" href="./styles/css/alertify.core.css">
+        <link rel="stylesheet" href="./styles/css/alertify.default.css"/>
+        <!-- Jquery css -->
+        <link  href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/smoothness/jquery-ui.css"
         <!-- Estilos: en href va la hoja de estilos propia -->
         <link rel="stylesheet" href="./styles/css/styles.css">
     </head>
 
     <body class="hold-transition login-page">
+
         <!-- Formulario del login -->
         <div class="container-fluid">
             <div class="row">
-                <form action="" class="form-signin" name="frm_login" method="POST"    role="form">
+                <form action="./modules/LoginController.php" class="form-signin"
+                    name="frm_login" id="frm_login" method="POST" role="form">
                     <!-- Header del formulario -->
                     <div class="form_header">
                         <h2>I.E. Allahu Akbar</h2>
@@ -29,14 +39,14 @@
                     <!-- Body del formulario -->
                     <div class="input_datos">
                         <!-- Input ID -->
-                        <label for="inputId">
+                        <label class="id" for="inputId">
                             <div class="input-group">
                                 <div class="input-group-addon">
                                     <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                                 </div>
-                                
-                                <input type="text" class="form-control" 
-                                       name="input_id" id="inputId"
+
+                                <input type="text" class="form-control"
+                                       name="inputId" id="inputId"
                                        placeholder="ID" autocomplete="off" required autofocus/>
                             </div>
                         </label>
@@ -48,14 +58,14 @@
                                     <div class="input-group-addon">
                                         <span class="fa fa-credit-card-alt" aria-hidden="true"></span>
                                     </div>
-                                    
+
                                     <input type="text" class="form-control"
-                                       name="input_tipodcto" id="inputTipodcto" placeholder="Tipo tipo de documento"
-                                       autocomplete="off" required autofocus/>
+                                           name="inputTipodcto" id="inputTipodcto" placeholder="Tipo tipo de documento"
+                                           autocomplete="off" required autofocus/>
                                 </div>
                             </label>
                         </div>
-                        
+
                         <!-- Input numero dcto -->
                         <div class="input_numdcto">
                             <label for="inputNumdcto">
@@ -63,43 +73,49 @@
                                     <div class="input-group-addon">
                                         #
                                     </div>
-                                    
-                                    <input type="text" class="form-control" 
-                                           name="input_numdcto" id="inputNumdcto"
+
+                                    <input type="text" class="form-control"
+                                           name="inputNumdcto" id="inputNumdcto"
                                            placeholder="Número del documeto" autocomplete="off"
-                                       required autofocus/>
+                                           required autofocus/>
                                 </div>
                             </label>
                         </div>
-                        
+
                         <!-- Validacion de tipo de persona -->
                         <div class="radio btn-group">
                             <input type="radio" class="radio-inline" name="persona"
-                                id="rbtn_estudiante" autocomplete="off" required/>
+                                   id="rbtn_estudiante" autocomplete="off" required/>
                             <label for="rbtn_estudiante">Estudiante</label><br/>
 
                             <input type="radio" class="radio-inline" name="persona"
-                                id="rbtn_profesor" autocomplete="off" required/>
+                                   id="rbtn_profesor" autocomplete="off" required/>
                             <label for="rbtn_profesor">Profesor</label><br/>
 
                             <input type="radio" class="radio-inline" name="persona"
                                    id="rbtn_administrativo" autocomplete="off" required/>
                             <label for="rbtn_administrativo">Profesor</label><br/>
                         </div>
-                        
+
                         <!-- Boton para inciar sesion -->
                         <div>
-                            <button class="btn btn-success btn-block btn-flat" type="submit" 
+                            <button class="btn btn-info btn-block btn-flat" type="submit"
                                     id="buttonSend" name="btn_send">Iniciar sesión
                             </button>
                         </div>
                     </div>
                 </form>
+
+
+
             </div>
         </div>
 
         <!-- Scripts: jquery y bootstrap -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="./styles/js/jquery.js"></script>
+        <script src="./styles/js/bootstrap.min.js"></script>
+        <script src="./styles/js/alertify.min.js"></script>
+        <!-- Scripts propios -->
+        <script src="./styles/js/buttonsActions.js"></script>
     </body>
 </html>

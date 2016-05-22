@@ -8,7 +8,6 @@ require_once('config.php');
 class Connection {
     private $con;
 
-    /** Constructor de la clase Connection */
     public function __construct() {
         $this->con = new mysqli(DB_HOST, DB_USER, DB_PWD, DB_NAME);
 
@@ -17,23 +16,37 @@ class Connection {
         }
     }
 
-    /** Destructo de la clase Connection */
     public function __destruct() {
-        if ($this->con->close())
+        if ($this->con->close()) {
             $this->con = null;
-
-        //echo "Se ha cerrado la conexion";
+        }
     }
 
-    /** Funcion para hacer un query */
-    public function get_query($query) {
-        $result = $this->con->query($query);
+    public function getReturnQuery($sql) {
+        $query = $this->con->query($sql);
 
         if ($this->con->error) {
             die("Fallo al realizar consulta: " . $this->con->error);
         }
-        else {
-            return $result;
+
+        $num_rows = $this->getNumRows($query);
+
+        for ($i = 0; $i < $num_rows; $i++) {
+            $query->fetch_array(MYSQLI_ASSOC);
         }
+
+        return $query;
+    }
+
+    public function getSimpleQuery($sqly) {
+        $this->con->query($sqly);
+
+        if ($this->con->error) {
+            die("Fallo al realizar consulta: " . $this->con->error);
+        }
+    }
+
+    public function getNumRows($sql) {
+        return mysqli_num_rows($sql);
     }
 }
