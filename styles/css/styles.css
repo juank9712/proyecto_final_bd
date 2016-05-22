@@ -1,0 +1,57 @@
+body {
+    font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    background-color: #BFE8F5;
+}
+
+.container {
+    width: 1000px;
+    height: 500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.form-signin {
+    max-width: 320px;
+    padding: 10px 30px 30px;
+    margin: 0 auto 20px;
+    background-color: #FFFFFF;
+    /*border: 1px solid #e5e5e5;*/
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,.32);
+    text-align: center;
+}
+
+.form-signin #inputId, #inputTipodcto, #inputNumdcto {
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+.form-signin input[type="text"] {
+    margin-bottom: auto;
+    border-bottom-right-radius: 2;
+    border-bottom-left-radius: 2;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 6px;
+    border-top-left-radius: 2;
+    border-top-right-radius: 2;
+}
+
+.form-signin .btn-group {
+    text-align: left;
+}
+
+.input-validation-error {
+    background-color: #ffeeee;
+    outline: 2px solid #ff0000;
+}
+
+.form-signin #buttonSend {
+    padding: 12px;
+}
